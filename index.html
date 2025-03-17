@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  </head>
+
+  <body>
+
+  <main>
+
+ <h1> Contact Us </h1>
+
+ <div class="rowble">
+
+  <div>
+
+    <label for="FirstNameInput"> First Name </label>
+
+    <input type="text" required id="FirstNameInput">
+
+    <span aria-live="polite" aria-hidden="true" class="errorShowcaser">
+      This field is required
+    </span>
+
+  </div>
+
+  <div>
+
+    <label for="LastNameInput"> Last Name </label>
+
+    <input type="text" required id="LastNameInput">
+
+    <span aria-live="polite" aria-hidden="true" class="errorShowcaser">
+      This field is required
+    </span>
+
+  </div>
+
+ </div>
+
+ <div>
+
+   <label for="EmailAddressInput"> Email Address </label>
+
+   <input type="email" required id="EmailAddressInput">
+
+   <span aria-live="polite" aria-hidden="true" class="errorShowcaser">
+    Please enter a valid email address
+   </span>
+
+ </div>
+
+ <label> Query Type </label>
+
+ <div class="rowble">
+
+    <fieldset>
+
+    <input type="radio" name="QueryType" tabindex="0" id="GeneralEnquiryInput">
+
+    <span> General Enquiry </span>
+
+  </fieldset>
+
+<fieldset>
+
+  <input type="radio" name="QueryType" tabindex="0" id="SupportRequestInput">
+
+  <span> Support Request </span>
+
+</fieldset>
+
+ </div>
+
+ <span aria-live="polite" aria-hidden="true" class="errorShowcaser">
+   Please select a query type
+ </span>
+
+ <label for="Message"> Message </label>
+
+ <textarea autocapitalize name="message" id="Message"></textarea>
+
+ <span aria-live="polite" aria-hidden="true" class="errorShowcaser">
+  This field is required
+ </span>
+ 
+ <div class="rowReverse">
+
+  <label for="consentInput">
+    I consent to being contacted by the team
+  </label>
+
+  <input type="checkbox" id="consentInput" required>
+
+</div>
+
+<span aria-live="polite" aria-hidden="true" class="errorShowcaser">
+  To submit this form, please consent to being contacted
+</span>
+
+<div class="rowble">
+
+ <button id="buttonSubmit"> Submit </button>
+
+ <button id="buttonReset"> Reset </button>
+
+</div>
+
+</main>
+
+<div aria-live="polite" aria-hidden="true" role="alert" id="alert">
+
+  <div>
+
+    <img src="./assets/images/icon-success-check.svg" alt="">
+
+    <b> Message Sent! </b>
+
+  </div>
+
+  <span>
+        Thanks for completing the form. We'll be in touch soon!
+  </span>
+
+</div>
+  
+  <div class="attribution">
+
+   <span> Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. </span>
+
+  <span> Coded by <a href="https://github.com/Guilherme-Porto-Silva/">Guigui-chan</a>. </span>
+
+  </div>
+
+  <script src="./engine.js"></script>
+
+</body>
+</html>

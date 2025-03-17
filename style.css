@@ -1,0 +1,199 @@
+@font-face {
+    font-family: "Karla";
+    src: url("./assets/fonts/Karla-VariableFont_wght.ttf");
+}
+
+
+
+body, main, .rowble, .attribution, #alert.active{
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+body{
+    font-family: "Karla";
+    padding: 5% 1%;
+    background-color: hsl(148, 38%, 91%);
+}
+
+body, main, label::before, fieldset, .rowReverse, .rowble, .errorShowcaser.active, .attribution, #alert.active, #alert.active div{ display: flex; }
+
+body, main, fieldset, .rowble, .rowReverse, .attribution, #alert.active div{ align-items: center; }
+
+
+
+main{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    width: 90%;
+    height: 100%;
+    padding: 5%;
+}
+
+main, #alert.active{ align-items: flex-start; }
+
+
+
+
+label{
+    font-weight: 400;
+    display: block;
+    width: max-content;
+    margin-bottom: 0.5rem;
+}
+
+label::before{
+    content: "*";
+    color: hsl(169, 82%, 27%);
+}
+
+label::before, fieldset, #alert.active div{ justify-content: flex-start; }
+
+label::before, .rowReverse{ flex-direction: row-reverse; }
+    
+.rowReverse{ justify-content: flex-end; }
+
+
+
+input{
+    width: 90%;
+    padding: 0.5rem;
+    font-size: 110%;
+}
+
+input:checked {
+    box-shadow: inset 0px 0px 5px 2px hsl(169, 82%, 27%);
+    background-color: hsl(169, 82%, 27%);
+}
+
+input, button, fieldset, textarea{ border-radius: 5px; }
+
+input, fieldset, textarea{ border: 1px solid hsl(187, 24%, 22%); }
+
+input:hover, fieldset:hover, textarea:focus, textarea:hover, #GeneralEnquiryInput:focus, #SupportRequestInput:focus, #consentInput:focus{ border: 0.2rem solid hsl(169, 82%, 27%); }
+
+input:focus, fieldset:hover, textarea:focus{ background-color: hsl(186, 25%, 76%); }
+
+input[type="checkbox"]:focus, input[type="radio"]:focus{ outline: 0.2rem solid hsl(169, 82%, 27%); }
+
+
+
+fieldset, .row, .rowReverse{ gap: 1rem; }
+
+fieldset{ width: 80%; }
+
+
+
+button{
+    background-color: hsl(169, 82%, 27%);
+    font-size: larger;
+    width: 60%;
+    align-self: center;
+    padding: 0.5rem;
+}
+
+button, a:focus, #alert{ color: hsl(0, 0%, 100%); }
+
+button, #GeneralEnquiryInput, #SupportRequestInput, #consentInput{ cursor: pointer; }
+
+button:focus, a:focus{ background-color: hsl(0, 66%, 54%); }
+
+button:hover, #alert{ background-color: hsl(187, 24%, 22%); }
+
+button:focus:hover{ background-color: hsl(228, 45%, 44%); }
+
+button:hover, #alert, button:focus:hover{
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+
+
+
+textarea{
+    width: 95%;
+    height: max-content;
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+textarea, #alert.active{ overflow-wrap: break-word; }
+
+
+
+a { color: hsl(228, 45%, 44%); }
+
+a:hover { color: hsl(0, 66%, 54%); }
+
+a:focus:hover { color: gold; }
+
+
+
+h1{ font-weight: 700; }
+
+div{ width: 100%; }
+
+.rowble{ gap: 2rem; }
+
+.errorShowcaser, #alert{ display: none; }
+
+.errorShowcaser.active{ color: hsl(0, 66%, 54%); }
+
+#GeneralEnquiryInput, #SupportRequestInput, #consentInput{
+    width: min-content;
+    height: min-content;
+}
+
+#alert.active{
+    z-index: 2;
+    position: absolute;
+    top: 5%;
+    width: 60%;
+    padding: 5%;
+
+    div{ gap: 1rem; }
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+    body, main{ font-size: larger; }
+
+    .rowble{ flex-direction: row; }
+}
+
+@media screen and (min-width: 900px) {
+
+    body{
+        height: 90vh;
+        padding: 1%;
+        overflow: hidden;
+    }
+
+    main{
+        height: max-content;
+        width: 50%;
+        padding: 2%;
+        border-radius: 15px;
+    }
+
+    button{
+        width: 40%;
+        padding: 1rem;
+    }
+
+    button, input, fieldset, textarea{ border-radius: 8px; }
+    
+    .attribution{
+        flex-direction: row;
+        gap: calc(0.5rem + 1vw);
+    }
+
+    #GeneralEnquiryInput, #SupportRequestInput, #consentInput{ border-radius: 4px; }
+
+    #alert.active{
+        width: 30%;
+        padding: 2%;
+    }
+}
