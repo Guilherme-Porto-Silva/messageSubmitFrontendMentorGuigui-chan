@@ -5,7 +5,7 @@
 
 
 
-body, main, .rowble, .attribution, #alert.active{
+body, main, aside, .rowble, #alert.active{
     flex-direction: column;
     justify-content: center;
     gap: 0.5rem;
@@ -17,9 +17,9 @@ body{
     background-color: hsl(148, 38%, 91%);
 }
 
-body, main, label::before, fieldset, .rowReverse, .rowble, .errorShowcaser.active, .attribution, #alert.active, #alert.active div{ display: flex; }
+body, main, label::before, fieldset, aside, .rowReverse, .rowble, .errorShowcaser.active, #alert.active, #alert.active div{ display: flex; }
 
-body, main, fieldset, .rowble, .rowReverse, .attribution, #alert.active div{ align-items: center; }
+body, main, fieldset, aside, .rowble, .rowReverse, #alert.active div{ align-items: center; }
 
 
 
@@ -185,7 +185,7 @@ div{ width: 100%; }
 
     button, input, fieldset, textarea{ border-radius: 8px; }
     
-    .attribution{
+    aside{
         flex-direction: row;
         gap: calc(0.5rem + 1vw);
     }
